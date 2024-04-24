@@ -153,7 +153,7 @@ function upgrade(name) {
     }
   }
 
-  if (name == "bighyenas") {
+  if (name == "Big Hyenas") {
     if (money >= bighyenascost && bighyenasown < 50) {
       
       if (bighyenasown <= 13) {
