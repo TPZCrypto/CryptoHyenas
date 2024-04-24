@@ -110,7 +110,7 @@ function clicked() {
 }
 //upgrade function
 function upgrade(name) {
-  if (name == "Small Hyenas") {
+  if (name == "clicker cat") {
     if (money >= catcost && catown < 50) {
       
       if (catown <= 13) {
@@ -153,7 +153,7 @@ function upgrade(name) {
     }
   }
 
-  if (name == "Big Hyenas") {
+  if (name == "worker") {
     if (money >= workercost && workerown < 50) {
       
       if (workerown <= 13) {
