@@ -99,7 +99,7 @@ function reset() {
 //timer
 function myTimer() {
     money += msec;
-  document.getElementById("total").innerHTML = "LB: " + addcomma(money);
+  document.getElementById("total").innerHTML = "Hyenas: " + addcomma(money);
 }
 setInterval(myTimer, 1000);
 
