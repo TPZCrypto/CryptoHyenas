@@ -9,8 +9,8 @@ smallhyenasown = 0;
 bighyenasown = 0;
 smallhyenasadd = 1;
 bighyenasadd = 15;
-cboost = 1;
-wboost = 1;
+sboost = 1;
+bboost = 1;
 smallhyenasmax = 0;
 bighyenasmax = 0;
 
@@ -52,8 +52,8 @@ function save() {
   localStorage.setItem("upown", upown);
   localStorage.setItem("smallhyenasadd", smallhyenasadd);
   localStorage.setItem("bighyenasadd", bighyenasadd);
-  localStorage.setItem("cboost", cboost);
-  localStorage.setItem("wboost", wboost);
+  localStorage.setItem("sboost", sboost);
+  localStorage.setItem("bboost", bboost);
   localStorage.setItem("smallhyenasmax", smallhyenasmax);
   localStorage.setItem("bighyenasmax", bighyenasmax);
 }
@@ -72,8 +72,8 @@ function load() {
   upown = parseInt(localStorage.getItem("upown"));
   smallhyenasadd = parseInt(localStorage.getItem("smallhyenasadd"));
   bighyenasadd = parseInt(localStorage.getItem("bighyenasadd"));
-  cboost = parseInt(localStorage.getItem("cboost"));
-  wboost = parseInt(localStorage.getItem("wboost"));
+  sboost = parseInt(localStorage.getItem("sboost"));
+  bboost = parseInt(localStorage.getItem("bboost"));
   smallhyenasmax = parseInt(localStorage.getItem("smallhyenasmax"));
   bighyenasmax = parseInt(localStorage.getItem("bighyenasmax"));
 
@@ -116,31 +116,31 @@ function upgrade(name) {
       if (smallhyenasown <= 13) {
         msec += smallhyenasadd;
         smallhyenasadd++;
-        cboost = 1;
+        sboost = 1;
       } else if (smallhyenasown == 14) {
         msec += smallhyenasadd;
         smallhyenasadd++;
-        cboost = 200;
+        sboost = 200;
       } else if (smallhyenasown <= 23) {
         msec += 200 * smallhyenasadd;
         smallhyenasadd++;
-        cboost = 200;
+        sboost = 200;
       } else if (smallhyenasown == 24) {
         msec += 200 * smallhyenasadd;
         smallhyenasadd++;
-        cboost = 5000;
+        sboost = 5000;
       } else if (smallhyenasown <= 48) {
         msec += 5000 * smallhyenasadd;
         smallhyenasadd++;
-        cboost = 5000;
+        sboost = 5000;
       } else if (smallhyenasown == 49) {
         msec += 5000 * smallhyenasadd;
         smallhyenasadd++;
-        cboost = 15000;
+        sboost = 15000;
       } else {
         msec += 15000 * smallhyenasadd;
         smallhyenasadd++;
-        cboost = 15000;
+        sboost = 15000;
       }
       smallhyenasown += 1;
       money -= smallhyenascost;
@@ -159,31 +159,31 @@ function upgrade(name) {
       if (bighyenasown <= 13) {
         msec += bighyenasadd;
         bighyenasadd++;
-        wboost = 1;
+        bboost = 1;
       } else if (bighyenasown == 14) {
         msec += bighyenasadd;
         bighyenasadd++;
-        wboost = 200;
+        bboost = 200;
       } else if (bighyenasown <= 23) {
         msec += 200 * bighyenasadd;
         bighyenasadd++;
-        wboost = 200;
+        bboost = 200;
       } else if (bighyenasown == 24) {
         msec += 200 * bighyenasadd;
         bighyenasadd++;
-        wboost = 5000;
+        bboost = 5000;
       } else if (bighyenasown <= 48) {
         msec += 5000 * bighyenasadd;
         bighyenasadd++;
-        wboost = 5000;
+        bboost = 5000;
       } else if (bighyenasown == 49) {
         msec += 5000 * bighyenasadd;
         bighyenasadd++;
-        wboost = 15000;
+        bboost = 15000;
       } else {
         msec += 15000 * bighyenasadd;
         bighyenasadd++;
-        wboost = 15000;
+        bboost = 15000;
       }
       bighyenasown += 1;
       money -= bighyenascost;
